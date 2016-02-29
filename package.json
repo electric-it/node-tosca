@@ -1,0 +1,23 @@
+{
+  "name": "node-tosca",
+  "version": "1.0.0",
+  "description": "Tosca in javascript",
+  "main": "node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nola Stowe",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-preset-es2015": "^6.5.0",
+    "lo-dash": "^1.0.0",
+    "object-merge": "^2.5.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "prettyjson": "^1.1.3",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.4.0"
+  }
+}
