@@ -1,4 +1,3 @@
-var lodash = require('lodash');
 var prettyjson = require('prettyjson');
 
 
