@@ -4,16 +4,11 @@
   "description": "Tosca in javascript",
   "main": "node.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./tests/tosca_test.js | tap-spec"
   },
   "author": "Nola Stowe",
   "license": "Apache-2.0",
-  "dependencies": {
-    "babel": "^6.5.2",
-    "babel-preset-es2015": "^6.5.0",
-  },
   "devDependencies": {
-    "babel-cli": "^6.4.5",
     "prettyjson": "^1.1.3",
     "tap-spec": "^4.1.1",
     "tape": "^4.4.0"
