@@ -45,7 +45,6 @@ node_types:
 
 
 > tosca.pp(z)
-
 node_instance:
   properties:
     color: red
