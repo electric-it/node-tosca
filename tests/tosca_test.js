@@ -1,7 +1,7 @@
 const test = require('tape');
 const tosca = require('../tosca.js');
 
-test('assert building a node with properties', function(t) {
+test('assert building a node with 1 property', function(t) {
     t.plan(2)
     
     const node = tosca.build_node();
