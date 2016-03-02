@@ -1,5 +1,0 @@
----
-applications:
-  - name: apimocker
-    buildpack: https://github.com/heroku/heroku-buildpack-nodejs
-    memory: 64M
