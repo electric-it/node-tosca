@@ -23,6 +23,30 @@ test('assert building a node with 2 properties', function(t) {
   t.equal(node_with_2props.node_types.Node.properties.size, 'large', 'assert props has large') 
 })
 
+test('assert building node with all the things', function(t) {
+  t.plan(6)    
+
+  var node = tosca.node.build()
+  node = tosca.node.add_property(node, 'color', 'red')
+  t.equal(node.node_types.Node.properties.color, 'red', 'properties can be added to')
+
+  node = tosca.node.add_attribute(node, 'name', 'taco')
+  t.equal(node.node_types.Node.attributes.name, 'taco', 'attributes can be added to')
+
+  node = tosca.node.add_requirement(node, 'status', 'on')
+  t.equal(node.node_types.Node.requirements.status, 'on', 'requirements can be added to')
+
+  node = tosca.node.add_capability(node, 'size', 'large')
+  t.equal(node.node_types.Node.capabilities.size, 'large', 'capabilities can be added to')
+
+  node = tosca.node.add_interface(node, 'prod', '123.123.12.1')
+  t.equal(node.node_types.Node.interfaces.prod, '123.123.12.1', 'interfaces can be added to')
+
+  node = tosca.node.add_metadata(node, 'owner', 'bob')
+  t.equal(node.node_types.Node.metadatas.owner, 'bob', 'metadata can be added to')
+    
+})
+
 test('assert building node_instance', function(t) {
   t.plan(1)
 
