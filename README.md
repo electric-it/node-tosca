@@ -7,7 +7,7 @@ node-tosca has a pretty print method to print a tosca object when you are in the
 # Usage
 
 ```
-var tosca = require("./tosca.js")
+var tosca = require("node-tosca")
 
 var a = tosca.node.build()
 
@@ -54,6 +54,12 @@ node_instance:
 
 
 ## Development
+
+Install dependancies:
+
+```
+npm install
+```
 
 Run tests with:
 
