@@ -9,15 +9,19 @@ node-tosca has a pretty print method to print a tosca object when you are in the
 ```
 var tosca = require("./tosca.js")
 
-var a = tosca.build_node();
+var a = tosca.node.build()
 
-a = tosca.node_add_property(a, "color", "red");
-a = tosca.node_add_attribute(a, "size", "md");
-a = tosca.node_add_requirement(a, "logger", "base");
-a = tosca.node_add_capability(a, "scale", "1x");
-a = tosca.node_add_interface(a, "production", "142.13.5.391");
-a = tosca.node_add_artifact(a, "size", "md");
-a = tosca.node_add_metadata(a, "last_audit", "2016-04-01");
+a = tosca.node.add_property(a, "color", "red")
+a = tosca.node.add_attribute(a, "size", "md")
+a = tosca.node.add_requirement(a, "logger", "base")
+a = tosca.node.add_capability(a, "scale", "1x")
+a = tosca.node.add_interface(a, "production", "142.13.5.391")
+a = tosca.node.add_artifact(a, "size", "md")
+a = tosca.node.add_metadata(a, "last_audit", "2016-04-01")
+
+z = tosca.instance.build()
+z = tosca.instance.add_property(z,'color', 'red')
+z = tosca.instance.add_state(z, 'starting')
 
 > tosca.pp(a);
 node_types:
@@ -37,6 +41,14 @@ node_types:
       size: md
     metadatas:
       last_audit: 2016-04-01
+
+
+> tosca.pp(z)
+
+node_instance:
+  properties:
+    color: red
+  state:      starting
 
 ```
 
