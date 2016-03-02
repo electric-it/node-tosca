@@ -1,8 +1,8 @@
 {
   "name": "node-tosca",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Tosca in javascript",
-  "main": "tosca.js",
+  "main": "lib/tosca.js",
   "scripts": {
     "test": "node ./tests/tosca_test.js | tap-spec"
   },
@@ -12,6 +12,9 @@
     "prettyjson": "^1.1.3"
   },
   "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-watch": "^0.6.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.4.0"
   }
