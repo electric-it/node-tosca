@@ -2,11 +2,19 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     jshint : {
-      options : { asi : true },  // leave me alone about ;         
-      files : ['lib/**/*js']
+      options : {
+        asi : true
+      , laxcomma : true
+     }
+     , files : [
+       'lib/**/*js'
+     , 'test/**/*js']
     },
     watch : {
-      files : ['lib/**/*js'],
+      files : [
+        'lib/**/*js'
+      , 'test/**/*js'
+      ],
       tasks : ['jshint']
     }
   })
