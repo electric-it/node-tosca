@@ -1,8 +1,8 @@
 {
   "name": "node-tosca",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tosca in javascript",
-  "main": "node.js",
+  "main": "tosca.js",
   "scripts": {
     "test": "node ./tests/tosca_test.js | tap-spec"
   },

@@ -18,7 +18,7 @@ node_add = function(node, type, name, value) {
   var new_props = {}
   new_props[name] = value
   Object.assign(props, new_props)
-  node['node_types']['Node']['type'] = props
+  node['node_types']['Node'][type] = props
   return node
 }
 
