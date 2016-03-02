@@ -19,7 +19,8 @@ a = tosca.node.add_interface(a, "production", "142.13.5.391")
 a = tosca.node.add_artifact(a, "size", "md")
 a = tosca.node.add_metadata(a, "last_audit", "2016-04-01")
 
-z = tosca.instance.build()
+var z = tosca.instance.build()
+
 z = tosca.instance.add_property(z,'color', 'red')
 z = tosca.instance.add_state(z, 'starting')
 
