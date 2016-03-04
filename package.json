@@ -6,6 +6,7 @@
   "scripts": {
     "test": "node ./tests/tosca_test.js | tap-spec"
   },
+  "repository":"https://github.com/electric-it/node-tosca",
   "author": "Nola Stowe",
   "license": "Apache-2.0",
   "dependencies" : {
