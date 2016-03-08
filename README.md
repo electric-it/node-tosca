@@ -24,31 +24,33 @@ var z = tosca.instance.build()
 z = tosca.instance.add_property(z,'color', 'red')
 z = tosca.instance.add_state(z, 'starting')
 
-> tosca.pp(a);
-node_types:
-  Node:
-    type: tosca.nodes.Compute
+
+var document = tosca.template.publish(tosca.template.build(z, a))
+
+> tosca.pp(document)
+tosca_definitions_version: 'tosca_simple_yaml_1_0',
+  node_instance:
     properties:
       color: red
-    attributes:
-      size: md
-    requirements:
-      logger: base
-    capabilities:
-      scale: 1x
-    interfaces:
-      production: 142.13.5.391
-    artifacts:
-      size: md
-    metadatas:
-      last_audit: 2016-04-01
+    state:      starting
+  node_types:
+    Node:
+      type: tosca.nodes.Compute
+     properties:
+        color: red
+     attributes:
+        size: md
+      requirements:
+        logger: base
+      capabilities:
+        scale: 1x
+      interfaces:
+        production: 142.13.5.391
+      artifacts:
+        size: md
+      metadatas:
+        last_audit: 2016-04-01
 
-
-> tosca.pp(z)
-node_instance:
-  properties:
-    color: red
-  state:      starting
 
 ```
 
